@@ -1,2 +1,2 @@
 # TakeAChillpill
-Chat I don't think I'm doing this right
+Oogada boogada yousa a blue moosa
