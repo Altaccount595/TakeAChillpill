@@ -36,10 +36,9 @@ def test_tmplt():
             else:
                 total -= num #Used for weighted probability; subtracts the probability from the total if the occupation is not chosen
     for stuff in dic.keys():
-        page = page + stuff + "<br>"
+        page = page +"<tr>"+stuff +"</tr>"
     page += "</tbody></table>"
     return render_template('tablified.html', foo="fooooo", oogada= "combining elements of flask and html", boogada="Jonathan Metzler-Kyle Lee-Suhana Kumar - MLK", collection=coll)
-
 
 if __name__ == "__main__":
     app.debug = True
