@@ -1,6 +1,14 @@
+Checks if the username is there, if it isn't, appends the username to dictionary  
 Our goal is to make a dictionary with all the usernames made and if they are logged in atm
 Keys would be usernames, values would be booleans
 There shouldn't be more than one true value at a time, because value is set to false when user logs out
 For right now when app.py is terminated the dictionary would be cleared.
 Unclear where to store the dictionary for right now, store it as a variable in app.py, or write out to a seperate file like a cookie. 
 C is for cookie and cookie is for me 
+
+
+New plan:
+Hardcode the dictionary into app.py with 3-4 preexisting usernames and passwords. When you log in displays username and greeting
+2 fields on login.html: username and passwords
+
+ye it works

@@ -4,6 +4,7 @@ from flask import request           #facilitate form submission
 
 
 app = Flask(__name__)    #create Flask object
+user = {"lol123":"pass123","noobslayer69":"gigachad","xxx_ultimategamer_xxx":"imadethispasswordswheniwas5"}
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
@@ -37,13 +38,16 @@ def authenticate():
     method1 = request.method
     if request.method == 'POST':
         username = request.form['username']
+        password = request.form['password']
         requesttype = "POST"
     else:
         username = request.args.get('username')
+        password = request.args.get('password')
         requesttype = "GET"
-    
-    return render_template( 'response.html', username=username, request = requesttype )  #response to a form submission
-
+    if user[username]==password: 
+        return render_template( 'response.html', username=username, request = requesttype )  #response to a form submission
+    else:
+        return render_template( 'login.html' )
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():
     print("\n\n\n")
