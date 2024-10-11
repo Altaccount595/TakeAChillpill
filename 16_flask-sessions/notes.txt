@@ -6,9 +6,6 @@ For right now when app.py is terminated the dictionary would be cleared.
 Unclear where to store the dictionary for right now, store it as a variable in app.py, or write out to a seperate file like a cookie. 
 C is for cookie and cookie is for me 
 
-
 New plan:
 Hardcode the dictionary into app.py with 3-4 preexisting usernames and passwords. When you log in displays username and greeting
 2 fields on login.html: username and passwords
-
-ye it works
