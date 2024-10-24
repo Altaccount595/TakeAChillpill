@@ -1,2 +1,3 @@
 # TakeAChillpill
-WU TANG CLAN AINT NOTHING TO F WITH 
+I inhale deep, like the words of my breath <br>
+I never sleep cause sleep is the cousin of death
