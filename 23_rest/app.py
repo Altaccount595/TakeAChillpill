@@ -11,11 +11,10 @@ APOD_URL = f'https://api.nasa.gov/planetary/apod?api_key={API_KEY}'
 def index():
     # Fetches data from NASA API using urllib
     with urllib.request.urlopen(APOD_URL) as response:
-        if response.status == 200:
+        if response.status == 200: #response.status==200 is the http way of saying sucessful response
             # Read and decode the JSON response
-            data = json.loads(response.read().decode())
-
-            # Extracts data from the api
+            data = json.loads(response.read().decode()) #api gives response in format of a dictionary
+            # Extracts data from the api dictionary
             title = data['title']
             date = data['date']
             explanation = data['explanation']
