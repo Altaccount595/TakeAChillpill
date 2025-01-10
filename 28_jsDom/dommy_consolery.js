@@ -9,6 +9,7 @@
 //(Ctrl-Shift-K in Firefox to reveal console)
 console.log("AYO");
 
+
 var i = "hello";
 var j = 20;
 
@@ -19,6 +20,7 @@ var f = function(x)
     var j=30;
     return j+x;
 };
+//uses local j from inside function
 
 
 //instantiate an object
@@ -30,6 +32,7 @@ var o = { 'name' : 'Thluffy',
               return x+30;
           }
         };
+//o is not a function, so it returns error
 
 //create a new node in the tree
 var addItem = function(text)
@@ -68,14 +71,40 @@ var stripe = function()
 	}
     }
 };
-
+//the list functions alter the list on the frontend
 
 //insert your implementations here for...
 // FIB
+var fib = function(n) {
+    if (n == 0) {
+      return 0;
+    } else if (n == 1) {
+      return 1;
+    } else {
+      return fib(n - 1) + fib(n - 2);
+    }
+  } 
 // FAC
+var fact = function(n) {
+    if(n==1){
+      return 1;
+    }
+  else {
+  return (n * fact(n-1))}
+  }
 // GCD
+var GCD = function(a, b) {
+    if (!b) {
+      return a;
+    }
+  
+    return GCD(b, a % b);
+  }
+  //if(b) returns true if b != 0, false if b == 0
 
-
+  console.log(fib(5));
+  console.log(fact(5));
+  console.log(GCD(12, 20));
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
 //  Note anything notable.
@@ -83,5 +112,4 @@ const myFxn = (param1, param2) => {
     // body
     return retVal;
 };
-
 
